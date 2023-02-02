@@ -30,7 +30,7 @@
 
 %we use article class because we want to fully customize the page and dont use a cv template
 \documentclass[10pt,A4]{article}	
-
+\usepackage[colorlinks=true, citecolor=red, urlcolor=blue]{hyperref}
 
 %----------------------------------------------------------------------------------------
 %	ENCODING
@@ -45,7 +45,7 @@
 
 % provides \isempty test
 \usepackage{xifthen}
-
+\usepackage[notransparent]{svg}
 %----------------------------------------------------------------------------------------
 %	FONT
 %----------------------------------------------------------------------------------------
@@ -150,7 +150,7 @@
 
 
 %Package for links, must be the last package used
-\usepackage[hidelinks]{hyperref}
+%\usepackage[hidelinks]{hyperref}
 
 %============================================================================%
 %
@@ -329,7 +329,7 @@
 %}}
 
 % use this for single words, e.g. CV or RESUME etc.
-\colorbox{bgcol}{\makebox[\mpwidth][c]{\HUGE{\textcolor{white}{\uppercase{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\uppercase{Resume}} } }}
+\colorbox{bgcol}{\makebox[\mpwidth][c]{\HUGE{\textcolor{white}{\uppercase{Marouane Zellou}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\uppercase{CV}} } }}
 
 %----------------------------------------------------------------------------------------
 %	HEADER IMAGE
@@ -337,24 +337,23 @@
 
 
 %\hspace{-1.6cm}
-%\includegraphics[trim= 0 250 0 270,clip,width=1\linewidth+3.1cm]{myfoto.jpg}	%trimming relative to image size!
-\includegraphics[trim= 350 150 0 200, clip ,width=\linewidth]{myfoto.jpg}	%trimming relative to image size
+\includegraphics[width=0.3\mpwidth]{photomoi.jpg}	%trimming relative to image size
 
 %---------------------------------------------------------------------------------------
 %	SUMMARY
 %----------------------------------------------------------------------------------------
 \transparent{0.85}%
-\vspace{-130pt}
+\vspace{-120pt}
 \hspace{0.4\linewidth}
 \colorbox{bgcol}{
 	\parbox{0.5\linewidth}{
 		\transparent{1}%
 		\begin{center}
-		\larrow{sectcol}\larrow{sectcol}\textcolor{white}{I create awesome resume templates in LaTeX for everyone. Besides that I am working at the University of Bremen and engineer fullstack JS applications with Meteor.}
+			\larrow{sectcol}\larrow{sectcol}\textcolor{white}{Proactif, autonome et rigoureux, je suis passionné d’informatique et ai goût prononcé pour le traitement de données. Mon parcours m ’a donné les compétences nécessaires pour mener à bien les projets informatiques répondants aux enjeux contemporains : cloud, infrastructures, IA, data-science}
 		\end{center}
 	}
 }
-\vspace{60pt}
+\vspace{20pt}
 
 %============================================================================%
 %
@@ -367,7 +366,7 @@
 %----------------------------------------------------------------------------------------
 \cvsection{Status}
 
-JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and healthcare
+Ingénieur en informatique spécialisé en infrastructure de data science.
 
 \vspace{12pt}
 
@@ -377,7 +376,7 @@ JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and hea
 \cvsection{Experience}
 
 %
-\cvevent{2016/09 - now}{Fullstack Javascript Engineer}{University of Bremen}{Invent a realtime classroom management using Meteor and React, Design software architecture and leading development}
+\cvevent{2021}{Ingénieur recherche et développements}{IGN - Paris}{Calcul haute performance, Stockage S3, Métriques des infrastructures, Détection d'objets et ségmentation sémantique par IA, Web sémantique}
 
 %\textcolor{softcol}{\hrule}
 
@@ -387,56 +386,57 @@ JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and hea
 
 %\textcolor{softcol}{\hrule}
 
+%
+\cvevent{2020}{Développeur web, BD}{\href{https://www.chu-tours.fr/wp-content/uploads/2020/05/CdP-2020-Recherche_etudeTours_CoCliCo-140520.pdf}{CHRU de Tours}}{Application Vue.js permettant la récolte des informations relatives aux antécédents \newline médicaux et aux symptômes des patients atteints de la Covid-19.}
 
-\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Invented a flexible assessment framework{,} targeting industrial trainees, Supervised software development lifecycle, Recruited team members}
+
+%\textcolor{softcol}{\hrule}
+\vspace{6pt}
+\cvevent{2020 - 2018}{Chef de projets informatiques}{MTE - Paris}{Responsable de la collecte{,} du contrôle de la qualité et des redressements des données \newline du logements social en France \href{http://www.statistiques.developpement-durable.gouv.fr/le-parc-locatif-social-au-1er-janvier-2020-0?rubrique=52&dossier=1049}{RPLS}, Développement d’applications R (\href{http://dataviz.statistiques.developpement-durable.gouv.fr/RPLS/}{Shiny}) facilitant l’accès aux données, Développement d’un \href{https://rdes_dreal.gitlab.io/propre.rpls/index.html}{paquet R} de production de rapports automatisés}
+
 
 %\textcolor{softcol}{\hrule}
 
-%
-\cvevent{2011 / 11}{Project Management Simulation Training}{Getoq Consulting}{Performed a two-day project simulation from management perspective, Topics included customer contracts{,} change management{,} controlling{,} operational tasks}
-
-%\textcolor{softcol}{\hrule}
-
 
 %
-\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex), Modeled software design{,} implemented various prototypes{,} conducted usability tests}
 
-\vspace{12pt}
+\vspace{6pt}
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
-\cvsection{Education}
+\cvsection{Parcours académique}
 
-\cvevent{2015 / 07}{Graduated as M.Sc. Digital Media}{University of Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment, Developed and evaluated an algorithm for semi automated scoring of spreadsheet data}
+\cvevent{2018}{Diplôme d’ingénieur des travaux publics de l’Etat}{ENTPE}{Master mobilité dans les mega-cites {(}Université de Lyon 1{)}}
+\vspace{6pt}
+
+\cvevent{2018}{Stage de fin d'études}{LICIT, ENTPE Lyon}{Etude de l’intégration de la dynamique du trafic dans la résolution des algorithmes de \newline plus court chemin, Article présenté au TRB : \newline \href{https://nicolaschiabaut.weebly.com/publications.html}{Toward a Traffic-Dependent Optimization of Urban Freight Deliveries \newline  Building a Benchmark Dataset and Analyzing Effects of Traffic Flow Dynamics}}
+\vspace{6pt}
 
 % \textcolor{softcol}{\hrule}
 
+\cvevent{2017}{Stage de recherche}{UTRC, City College of New York}{Etude de performance des algorithmes de plus courts chemin dépendants du trafic, Article publié au Transportation Research Borad et présenté à la l'International \newline Federation of Operational Research Societies : \newline  \href{https://journals.sagepub.com/doi/abs/10.1177/0361198118797829}{Probabilistic Fleet Sizing and Routing Problem to Minimize Mobility Disparities}}
+
 %
-\cvevent{2012 - 2013}{Master Project - PrIMA}{University of Bremen}{Co-Invented a touch table application for medical support{,} co-developed software (Java), Formed a scrum team{,} mainted project dev server (Debian){,} surveyed target audience}
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{2012 - 2015}{Master Studies Digital Media}{University of Bremen}{Inter-cultural classes in English{,} covering special topics in computer science and design, Professionalized in research methods{,} software development and e-assessment}
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne{,} Australia, Finished machine programming{,} information visualization{,} professional essay writing}
 
 
 \end{minipage}}%
-\fcolorbox{white}{sectcol}{\begin{minipage}[c][0.95\textheight][t]{0.33\linewidth}
+\fcolorbox{white}{sectcol}{\begin{minipage}[c][0.95\textheight][t]{0.28\linewidth}
 
 
 \begin{metasection}{Contact}
 
-    \icontext{MapMarker}{12}{Bremen, Germany}{white}\\[6pt]
-    \icontext{MobilePhone}{12}{+49 176 313 *** **}{white}\\[6pt]
-    \iconemail{Send}{12}{info@jankuester.com}{info@jankuester.com}{white}\\[6pt]
-    \iconhref{MousePointer}{12}{http://jankuester.com/}{www.jankuester.com}{white}\\[6pt]
-    \iconhref{Github}{12}{https://github.com/jankapunkt}{https://github.com/jankapunkt}{white}\\[6pt]
-    \iconhref{Twitter}{12}{@Kuester\_Jan}{https://twitter.com/kuester_jan?lang=en}{white}\\[6pt]
+	\icontext{MapMarker}{12}{Paris, Franjce}{white}\\[6pt]
+    \icontext{MobilePhone}{12}{+33 6 66 03 44 14}{white}\\[6pt]
+    \iconemail{Send}{12}{mzellou@protonmail.com}{mzellou@protonmail.com}{white}\\[6pt]
+    \iconhref{Github}{12}{https://github.com/MZellou}{https://github.com/MZellou}{white}\\[6pt]
 
 \end{metasection}
 
@@ -444,46 +444,54 @@ JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and hea
 %	META SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{metasection}{Fields}
 
-\icontext{Code}{12}{Software Development}{white}\\
-\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\\[6pt]
-
-\icontext{CommentsO}{12}{Consulting}{white}\\
-\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
-
-\icontext{CodeFork}{12}{Project Management}{white}\\
-\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
-
-
-\end{metasection}
 
 
 \begin{metasection}{Technologies}
 
 \textcolor{white}{
-	\icontext{Code}{12}{JavaScript}{white} \\[6pt]
-	\icontext{Code}{12}{Meteor}{white} \\[6pt]
-	\icontext{Fire}{12}{Blaze}{white} \\[6pt]
-	\icontext{Database}{12}{MongoDB}{white} \\[6pt]
-	\icontext{CodeFork}{12}{Git}{white} \\[6pt]
-}
+	\icontext{Code}{12}{Python-R}{white} \\[6pt]
+	\icontext{Code}{12}{JS-HTML-CSS}{white} \\[6pt]
+	\icontext{Code}{12}{Docker}{white} \\[6pt]
+	\icontext{Code}{12}{Bash}{white} \\[6pt]
+	\icontext{Database}{12}{POSTGRES}{white} \\[6pt]
+	\icontext{Github}{12}{Git}{white} \\[6pt]
+	\icontext{MapMarker}{12}{SIG}{white} \\[6pt]
+	%\includesvg[width=1.5cm,height=1.5cm]{docker}
+	}
 \end{metasection}
 
-\begin{metasection}{Tools}
+\begin{metasection}{Outils}
 
 \textcolor{white}{
-	\icontext{Code}{12}{Webstorm}{white} \icontext{CodeFork}{12}{SourceTree}{white}\\[6pt]
-	\icontext{Terminal}{12}{Terminal}{white}  \icontext{PaintBrush}{12}{Inkscape}{white}\icontext{Cube}{12}{Blender}{white}
+	\icontext{CodeFork}{12}{Portainer}{white}\\[6pt] 
+	\icontext{Dashboard}{12}{Grafana-Prometheus}{white} \\[6pt]
+	\icontext{Cloud}{12}{AWS S3-Minio}{white}  \\[6pt] 
+	\icontext{MapMarker}{12}{Leaflet-Geoserver}{white} \\[6pt] 
+	\icontext{ObjectUngroup}{12}{Pytorch-Yolo}{white} \\[6pt]
+	%\icontext{Leaf}{12}{}{white}
 }
 \end{metasection}
 
-\begin{metasection}{Activities}
+\begin{metasection}{Compétences à développer}
 
-\textcolor{white}{\LARGE{\icon{Gamepad}{24}{white} \icon{Headphones}{24}{white}  \icon{Bicycle}{24}{white}}}
+	\icontext{Code}{12}{Réseau}{white}\\
+	\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
+	
+	\icontext{CommentsO}{12}{Infrastructures}{white}\\
+	\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
+	
+	\icontext{Lock}{12}{SSI}{white}\\
+	\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
+\end{metasection}	
+
+\begin{metasection}{Loisirs}
+
+\textcolor{white}{\LARGE{\icon{Gamepad}{24}{white} \icon{Headphones}{24}{white}  \icon{Plane}{24}{white}}}  \\[6pt]
+\textcolor{white}{\LARGE{\icon{Anchor}{24}{white} \icon{CommentingO}{24}{white}  \icon{Compass}{24}{white}}}
 \end{metasection}
 
-\begin{metasection}{Operating Systems}
+\begin{metasection}{Systèmes d'exploitation}
 
 \textcolor{white}{\LARGE{\icon{Linux}{24}{white} \icon{Apple}{24}{white}  \icon{Windows}{24}{white}}}
 
@@ -493,10 +501,10 @@ JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and hea
 %	QR CODE (optional)
 %----------------------------------------------------------------------------------------
 
-\vspace{12pt}
-\begin{center}
-\includegraphics[width=0.35\mpwidth]{qrcode}
-\end{center}
+% \vspace{12pt}
+% \begin{center}
+% \includegraphics[width=0.35\mpwidth]{qrcode}
+% \end{center}
 
 \end{minipage}}
 
@@ -506,7 +514,7 @@ JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and hea
 
 \null
 \vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{Coypright 2018 jkuester@uni-bremen.de} $\cdot$ \textcolor{white}{licensed under MIT license}}}\\[-6pt]
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{}}}\\[-6pt]
 
 %============================================================================%
 %
